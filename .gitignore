@@ -43,7 +43,7 @@ DerivedData
 *.xcuserstate
 
 # MacOS
-.DS_Store
+# .DS_Store
 
 # Linux
 *.swp
