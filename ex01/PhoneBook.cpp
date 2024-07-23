@@ -14,11 +14,13 @@ void PhoneBook::searchContact() const {
     displayContactList();
     
     int index;
-    std::cout << "Enter the index of the contact to display: ";
     std::cin >> index;
 
     if (std::cin.fail() || index < 0 || index >= totalContacts) {
         std::cout << "Invalid index." << std::endl;
+		if (std::cin.eof()) {
+			exit(1);
+		}
         std::cin.clear();
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     } else {
