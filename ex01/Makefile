@@ -18,6 +18,9 @@ clean:
 fclean: clean
 	rm -f $(TARGET)
 
+format:
+	clang-format -style="{BasedOnStyle: Microsoft, IndentWidth: 4, UseTab: ForIndentation, TabWidth: 4}" -i $(SRCS)
+
 re: fclean all
 
 .PHONY: all clean fclean re
